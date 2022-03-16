@@ -13,7 +13,7 @@ class Main extends Component {
         this.props.data.forEach((hornedBeast, index) =>{
             beast.push(
                 <Beast
-                    imgURL={hornedBeast.imgURL}
+                    imgURL={hornedBeast.image_url}
                     title={hornedBeast.title}
                     description={hornedBeast.description}
                     keyword={hornedBeast.keyword}
