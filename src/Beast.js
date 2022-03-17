@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import Emoji from "./emoji"
-import { Card } from "react-bootstrap";
+import { Card, Row } from "react-bootstrap";
 import { Button } from "react-bootstrap";
-import {Col} from 'react-bootstrap/'
+import {Container} from 'react-bootstrap/'
+import './Beast.css'
 
 
 
@@ -21,8 +22,9 @@ class Beast extends React.Component{
   render() {
     console.log(this.state)
     return (
-      <Col md={5}>
-   <Card style={{ width: '300px' }}>
+      <Container >
+        <Row>
+   <Card style={{ width: '100px' }}>
     <Card.Img variant="top" src= {this.props.imgURL} />
     <Card.Body>
     <Card.Title>{this.props.title}</Card.Title>
@@ -32,7 +34,8 @@ class Beast extends React.Component{
     <Button variant="primary" onClick={ this.handleClick}>❤️Favorites:{this.state.favorite}</Button>
     </Card.Body>
     </Card> 
-</Col>
+    </Row>
+</Container>
     )
   }
 }
