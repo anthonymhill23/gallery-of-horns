@@ -8,7 +8,7 @@ export default class Header extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            click: <HeaderTitle welcome='Welcome! Vote for your favorite animal' intro="Click the 💘 button to favorite an image" />,
+            click: <HeaderTitle welcome='Welcome! Vote for  your favorite Horned Beast !!!' intro="Click the 💘 button to favorite an image" />,
         }
     }
 
