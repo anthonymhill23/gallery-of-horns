@@ -5,7 +5,7 @@ body {
 }
 .heading {
     background-color: red;
-    h1: p {
+    /* h1: p {
         
          ;
     }
@@ -17,7 +17,7 @@ body {
             background-color:#502f4c ;
             color: ;
         }
-    }
+    } */
 }
 .main {
     margin: .3rem;
