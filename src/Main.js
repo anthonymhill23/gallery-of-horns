@@ -1,37 +1,33 @@
 import React, { Component } from "react";
-import Beast from "./Beast";
-import hornedarray from "./Provided.json"
+import HornedBeast from "./Beast";
 import { Container } from "react-bootstrap";
 import { Row } from "react-bootstrap";
-import data from "./Provided.json"
-import "./App.css"
-import { Modal } from "./Modal";
 
+export default class Main extends Component {
 
-class Main extends Component {
     render() {
-        let beast = []
-        this.props.data.forEach((hornedBeast, index) => {
-            beast.push(
-                <Container>
-                    <Beast
-                        imgURL={hornedBeast.image_url}
-                        title={hornedBeast.title}
-                        description={hornedBeast.description}
-                        keyword={hornedBeast.keyword}
-                        key={index}
+        const renderArray = this.props.data.map((object) => {
 
-                    />
-                </Container>
-            )
-        });
+            const searching = object.title.toLowerCase();
+            if (this.props.searchData !== "" && !searching.includes(this.props.searchData)) {
+                return null
+            }
+
+            if (this.props.hornSelected !== "" && !(parseInt(this.props.hornSelected) === object.horns)) {
+                return null
+            }
+
+            return (<HornedBeast key={object.title} searchData={this.props.searchData} hornSelected={this.props.hornSelected} animal={object} openModal={this.props.modalTrue} />)
+        })
+
         return (
-            <main>
-                {beast}
-            </main>
+            <div className='main'>
+                <Container>
+                    <Row sm={1} md={2} lg={3} xl={4}>
+                        {renderArray}
+                    </Row>
+                </Container>
+            </div>
         )
     }
-
-
 }
-export default Main

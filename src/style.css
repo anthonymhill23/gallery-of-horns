@@ -1,0 +1,32 @@
+
+
+body {
+    background-color: purple;
+}
+.heading {
+    background-color: red;
+    h1: p {
+        
+         ;
+    }
+    input, select{
+        background-color: white;
+        font-size: 1.2em;
+        font-weight: 500;
+        &:hover {
+            background-color:#502f4c ;
+            color: ;
+        }
+    }
+}
+.main {
+    margin: .3rem;
+    background-color:purple ;
+}
+.row {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.card {
+    background-color:white ;
+}
